@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS Sample Code</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to NodeJS Sample Code Challenge</h1>
+    <h3>User Table:</h3>
+        <ul>
+            <li>(GET) /id : return UUID </li>
+            <li>(GET) /user : return list of users </li>
+            <li>(POST) /user : create new user (On page reload)</li>
+            <li>(Get) /tone : return random tones</li>
+        </ul>
+    <table>
+        <tr>
+            <th>UserId</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Tone</th>
+        </tr>
+        <% mock_record.forEach( (user) =>{ %>
+        <tr>
+            <td><%= user.userId %></td>
+            <td><%= user.firstName %></td>
+            <td><%= user.lastName %></td>
+            <td><%= user.email %></td>
+            <td><%= user.tone %></td>
+        </tr>
+        <% });%>
+    </table>
+    <% if (mock_record.length === 0) { %>
+    <h2>No Record Found </h2>
+    <% } %>
+
+</body>
+
+</html>
